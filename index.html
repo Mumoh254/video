@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #f0f0f5);
+      color: #333;
+    }
+
+    header {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .intro-text {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      max-width: 1200px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .intro-text h2 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .intro-text p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    video {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #28a745;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hello, I'm Peter Mumo!</h1>
+  </header>
+
+  <main>
+    <div class="intro-text">
+      <h2>Welcome to My Personal Introduction</h2>
+      <p>
+        I’m a passionate web and API developer with experience in creating 
+        interactive and user-friendly websites. I specialize in technologies 
+        like HTML, CSS, JavaScript, Node.js, and React. Before diving into 
+        tech, I was a mechanic, and now I aim to use technology to solve 
+        real-world problems and empower others.
+      </p>
+    </div>
+
+    <video id="introVideo"   height="200px"  width="200px"  >
+     
+      <source src="./video/WhatsApp Video 2024-12-10 at 12.25.44.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <button id="playPauseBtn">Play</button>
+  </main>
+
+
+  <header>
+    <h1> peter mumo  all  rights  reserved</h1>
+  </header>
+
+  <script>
+    const video = document.getElementById('introVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+
+    playPauseBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playPauseBtn.textContent = 'Pause';
+      } else {
+        video.pause();
+        playPauseBtn.textContent = 'Play';
+      }
+    });
+  </script>
+</body>
+</html>
